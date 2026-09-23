@@ -1,9 +1,6 @@
-import dayjs from 'dayjs'
 import './styles.css'
-import.meta.env.VITE_VERSION
-import { calcularPeso, formatDate } from './utils.js'
+import { calcularPeso, formatTarea } from './utils.js'
 import confetti from 'canvas-confetti'
-import { formatTarea } from './utils.js'
 
 const boton = document.getElementById('añadir')
 const input = document.getElementById('input')
@@ -15,17 +12,15 @@ boton.addEventListener('click', guardarplan)
 function guardarplan(e) {
   e.preventDefault()
   const minutos = duracionInput.value
-  if (!minutos ) return
+  if (!minutos) return
   if (!input.value) return
-  let peso = calcularPeso(minutos)
+  const intensidad = calcularPeso(minutos)
 
-
-  const fechaHoy = formatDate(new Date())
   const texto = input.value.trim()
-  if (!texto) return 
- 
+  if (!texto) return
+
   const li = document.createElement('li')
-  li.textContent = formatTarea(texto, duracionInput.value, new Date())
+  li.textContent = `${formatTarea(texto, minutos, new Date())} - Intensidad: ${intensidad}`
   lista.appendChild(li)
   
   input.value = ''

@@ -1,5 +1,46 @@
+.cabecera {
+  background-color: #0bd712;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 h1 {
   text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.campo input {
+  margin-bottom: 0;
+}
+
+.campo-actividad {
+  flex: 3;
+}
+
+.campo-duracion {
+  flex: 1;
+  min-width: 90px;
 }
 
 input {

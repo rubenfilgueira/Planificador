@@ -6,13 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Planificacion del curso</h1>
+    <div class="cabecera">
+      <h1>Planificacion del día</h1>
+    </div>
 
     <form class="form">
-      <input type="text" id="input" placeholder="Escribe lo que has hecho hoy" />
-      <label for="input">Actividad</label>
-      <label for="duracion">Duración</label>
-      <input type="number" id="duracion" placeholder="Duración en minutos" min="1" />
+      <div class="campo campo-actividad">
+        <label for="input">Actividad</label>
+        <input type="text" id="input" placeholder="Escribe lo que has hecho hoy" />
+      </div>
+      <div class="campo campo-duracion">
+        <label for="duracion">Duración</label>
+        <input type="number" id="duracion" placeholder="Minutos" min="1" />
+      </div>
       <button id="añadir">Añadir</button>
     </form>
 
