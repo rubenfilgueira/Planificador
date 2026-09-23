@@ -1,18 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Planificacion del curso</h1>
-    <input type="text" id="input" placeholder="Escribe lo que has hecho hoy">
-    <button id="añadir">Añadir</button>
 
-    <ul id="lista">
+    <form class="form">
+      <input type="text" id="input" placeholder="Escribe lo que has hecho hoy" />
+      <label for="input">Actividad</label>
+      <label for="duracion">Duración</label>
+      <input type="number" id="duracion" placeholder="Duración en minutos" min="1" />
+      <button id="añadir">Añadir</button>
+    </form>
 
-    </ul>
+    
+    <ul id="lista"></ul>
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>
